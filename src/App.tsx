@@ -1,10 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import './css/app.scss';
+import Header from './components/header';
+import Footer from './components/footer';
+import Contents from './components/documentation/contents';
 
 function App() {
   return (
     <div className="App">
-        <h1>Heloo world</h1>
+        <Header></Header>
+        <Contents></Contents>
+        <Footer></Footer>
     </div>
   );
 }
