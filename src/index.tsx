@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
+import Prism from 'prismjs';
 
 ReactDOM.render(
   <React.StrictMode>

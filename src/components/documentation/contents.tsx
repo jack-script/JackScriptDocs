@@ -1,48 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../../css/contents.scss";
 import Jackstring from "./jackstring";
 import { Collapse, Button, CardBody, Card, Container, Row, Col } from 'reactstrap';
 
+import Prism from 'prismjs';
+import "../../css/prism(1).css";
+import 'prismjs/components/prism-c';
+import 'prismjs/components/prism-cpp';
+
+
 
 const Contents = (props: any) => {
-    const [collapse, setCollapse] = useState(false);
-    const [status, setStatus] = useState('Closed');
-    const onEntering = () => setStatus('Opening...');
-    const onEntered = () => setStatus('Opened');
-    const onExiting = () => setStatus('Closing...');
-    const onExited = () => setStatus('Closed');
-    const toggle = () => setCollapse(!collapse);
-  
+    const code = `var data = 1;`;
+    // const html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
+
+    useEffect(()=>{
+        Prism.highlightAll();
+    }, []);
+
+
     return (
         <Container>
             <Row>
-                <Col md="2" xs="12">
-                    <Button id="toggleShowButton" color={status=="Closed" ? "danger" : "primary"} onClick={toggle} style={{ marginBottom: '1rem' }}>JackScript String</Button>
-                </Col>
-
                 <Col md="10" xs="12">
-                    <h5>JackScript-String</h5>
-                    <Collapse
-                    isOpen={collapse}
-                    onEntering={onEntering}
-                    onEntered={onEntered}
-                    onExiting={onExiting}
-                    onExited={onExited}
-                    >
-                    <Card>
-                        <CardBody>
-                        Anim pariatur cliche reprehenderit,
-                        enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                        anim keffiyeh helvetica, craft beer labore wes anderson cred
-                        nesciunt sapiente ea proident.
-                        </CardBody>
-
-                        <CardBody>
-                           <Jackstring></Jackstring>
+                  <pre>
+                      <code className="language-cpp">
+                      {`
                         
-                        </CardBody>
-                    </Card>
-                    </Collapse>
+                          #include <iostream>
+                          #include <string>;
+
+                          class Myclass{
+                              Myclass(std::string data, int sum){
+                                  this.data = data;
+                                  this.sum = sum;
+                              }
+                          }
+
+                        int main(){
+                            return 0;
+                        }
+                      `}
+                      </code>
+                    </pre>
                 </Col>
             </Row>
         </Container>
