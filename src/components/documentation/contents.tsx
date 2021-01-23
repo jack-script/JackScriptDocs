@@ -17,12 +17,7 @@ const Contents = (props: any) => {
 
     useEffect(()=>{
         Prism.highlightAll();
-         Prism.plugins.NormalizeWhitespace.setDefaults({
-            'remove-trailing': true,
-            'remove-indent': true,
-            'left-trim': true,
-            'right-trim': true,
-        });
+       
     }, []);
 
     var styles = {
