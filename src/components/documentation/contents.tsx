@@ -150,8 +150,8 @@ const Contents = (props: any) => {
             {/*Properties of sets Row*/}
             <Row>
                 <Col md="12">
-                    <h2 className="headerPerSection">Conclusion</h2>
-                    <p>To uninstall jackscriptpy <a href="https://pip.pypa.io/en/stable/reference/pip_uninstall/">read these docs</a> on how to uninstall pip packages</p>
+                    <h2 className="headerPerSection">Properties of Relations</h2>
+                    <p>Properties of sets are the </p>
                     <pre>
                         <code className="language-python">
                             {`
