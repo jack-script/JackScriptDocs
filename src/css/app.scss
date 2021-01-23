@@ -1,2 +1,10 @@
-$dark-blue : #3d5af1;
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
+p, h1, h2,h3, h4, h5 {
+    font-family: 'Josefin Sans', cursive;
+}
+
+.App{
+
+  background-color:#f0f0f0;
+}
