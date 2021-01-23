@@ -22,12 +22,8 @@ const Contents = (props: any) => {
     }, []);
 
     var styles = {
-        padding: '0px',
+        borderRadius: '0px',
     }
-
-    // console.log(Prism);
-
-   
 
     return (
         <div>
@@ -47,9 +43,7 @@ const Contents = (props: any) => {
                     <p>Install jackscript using your terminal</p>
                     <pre>
                         <code className="language-python">
-                            {`
-                                pip install jackscriptpy
-                            `}
+                            {`  pip install jackscriptpy`}
                         </code>
                     </pre>    
                 </Col>
@@ -68,11 +62,10 @@ const Contents = (props: any) => {
                     
                   <pre  className=" additionalAttributes" style={styles}>
                       <code className="language-python" style={styles}>
-                      {`
-                        from jackscriptpy import * # import the entire library
-                        # or 
-                        from jackscriptpy import Dom,Range # will import the Dom() and Range() functions
-                      `}
+                    
+                      {`    from jackscriptpy import * # import the entire library
+    # or 
+    from jackscriptpy import Dom,Range # will import the Dom() and Range() functions`}
                       </code>
                     </pre>
                 </Col>
@@ -83,9 +76,7 @@ const Contents = (props: any) => {
                     Therefore all set methods from the python standard library will work like usual</p>
                     <pre  className=" additionalAttributes" style={styles}>
                         <code className="language-python" style={styles}>
-                        {`
-                       mySet = set()
-                        `}
+                        {`      mySet = set()`}
                       </code>
                     </pre>
 
@@ -95,16 +86,14 @@ const Contents = (props: any) => {
                     <p>Coordinates are created lik so:</p>
                     <pre  className=" additionalAttributes" style={styles}>
                         <code className="language-python" style={styles}>
-                        {`
-                        mycoordinate = coord(1, 2) # this sets x to 1 and y to 2
+                      {`    mycoordinate = coord(1, 2) # this sets x to 1 and y to 2
                         
-                        # add a coordinate to a set, using the coordinate created above:
-                        myset.add(mycoordinate);
+    # add a coordinate to a set, using the coordinate created above:
+    myset.add(mycoordinate);
 
-                        # as expected, the standard library methods will work as usual
-                        myset.clear()
-                        print(myset)  # returns set()
-                        `}
+    # as expected, the standard library methods will work as usual
+    myset.clear()
+    print(myset)  # returns set()`}
                       </code>
                     </pre>
                 </Col>
@@ -117,14 +106,12 @@ const Contents = (props: any) => {
                 <p>isSubset() checks whether a set is a subset of another; returns true if parameter one is the subset of paramter two</p>
                   <pre  className=" additionalAttributes" style={styles}>
                       <code className="language-python" style={styles}>
-                      {`
-                        # declare 2 sets
-                        set1 = {2, 5, 6}
-                        set2 = {2, 5, 6, 9} 
+{`   # declare 2 sets
+    set1 = {2, 5, 6}
+    set2 = {2, 5, 6, 9} 
 
-                        answer = isSubset(set1, set2) # returns True 
-                        print(answer) # prints True
-                      `}
+    answer = isSubset(set1, set2) # returns True 
+    print(answer) # prints True `}
                       </code>
                     </pre>
 
@@ -135,15 +122,44 @@ const Contents = (props: any) => {
                         
                         <pre  className=" additionalAttributes" style={styles}>
                         <code className="language-python" style={styles}>
-                        {`
-                            set1 = {2, 5, 6}
-                            set2 = {2, 5, 6, 9}
+                          {`    set1 = {2, 5, 6}
+    set2 = {2, 5, 6, 9}
                             
-                            answer = isSuperset(set2, set1) # returns True 
-                            print(answer) # prints True
-                        `}
+    answer = isSuperset(set2, set1) # returns True 
+    print(answer) # prints True`}
                         </code>
                         </pre>
+
+                        <hr></hr>
+                        {/*isRelation Section*/}
+                        <h4 className="libraryFunctionHeader">isRelation() function</h4>
+                        <p></p>
+                        
+                        <pre  className=" additionalAttributes" style={styles}>
+                            <code className="language-python" style={styles}>
+                            {`  """ 
+		first create a cartesian product from sets:
+	 	there are obviously multiple ways of creating cartesianProducts; we'll use more complicated route to demonstrate the use:
+	"""
+	# Create a couple of normal sets
+	normalset1 = {2, 3, 4} # another way would be: normalset1 = Set([2,3,4])
+	normalset2 = {2, 3, 4}
+	normalset3 = {2, 3}
+
+	cartesian1 = createCartesian(normalset1, normalset2);
+    cartesian2 = createCartesian(normalset1, normalset3); 
+    
+    `}
+                            </code>
+                        </pre>   
+
+                        <p>as u can see above; we used <code>normalset1</code> and <code>normalset3</code> to create a <code>cartesian2</code></p>
+                        <p>so technically, <code>cartesianProduct2</code> should be a relation of <code>cartesian1</code>. We test this theory in the function below, in continuation of the above code.</p>     
+                        <pre>
+                        <code className="language-python" style={styles}>
+                            {`  print(isRelation(cartesian2, cartesian1)); # returns true`}
+                            </code>
+                        </pre>  
                 </Col>
             </Row>{/*End of sets documentation row*/}
 
@@ -151,12 +167,11 @@ const Contents = (props: any) => {
             <Row>
                 <Col md="12">
                     <h2 className="headerPerSection">Properties of Relations</h2>
-                    <p>Properties of sets are the </p>
+                    <p>Relations <b>R</b> are the subset of <b>A&sup2;</b>; we can call this relation a subset from <b>A</b> to <b>A</b>  </p>
+                    <p>This section describes the functions you can use to test relations on sets.</p>
                     <pre>
                         <code className="language-python">
-                            {`
-                                pip install jackscriptpy
-                            `}
+                            {`  print()`}
                         </code>
                     </pre>    
                 </Col>
@@ -170,9 +185,7 @@ const Contents = (props: any) => {
                     <p>To uninstall jackscriptpy <a href="https://pip.pypa.io/en/stable/reference/pip_uninstall/">read these docs</a> on how to uninstall pip packages</p>
                     <pre>
                         <code className="language-python">
-                            {`
-                                pip install jackscriptpy
-                            `}
+                            {`  pip uninstall jackscriptpy `}
                         </code>
                     </pre>    
                 </Col>

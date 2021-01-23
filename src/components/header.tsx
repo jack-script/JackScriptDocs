@@ -11,6 +11,7 @@ import { Collapse,
   DropdownMenu,
   DropdownItem,
   NavbarText } from 'reactstrap';
+  // import IconGithub from 'react-devicon/github/original'   
 import logo from '../images/logo.png';
 
 const Header = () => {
@@ -31,12 +32,11 @@ const Header = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="https://github.com/danielromeo/jackscript-py"><b>GITHUB</b></NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
+
+
+            <UncontrolledDropdown style={{display: 'none'}} nav inNavbar>
               <DropdownToggle nav caret>
                 Options
               </DropdownToggle>
@@ -54,7 +54,7 @@ const Header = () => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText> <b>JACKSCRIPT</b> </NavbarText>
         </Collapse>
       </Navbar>
     </div>

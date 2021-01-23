@@ -11,7 +11,8 @@ function App() {
 
 		<Header></Header>
 		<Contents></Contents>
-		<Footer></Footer>
+
+		{/*Include footer here*/ }
 		</div>
 	);
 }
