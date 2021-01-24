@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./contents.scss";
+import PropertiesOfSets from './PropertiesOfSetsComponent';
 
 // import Jackstring from "./jackstring";
 import { Collapse, Button, CardBody, Card, Container, Row, Col } from 'reactstrap';
@@ -163,19 +164,7 @@ const Contents = (props: any) => {
                 </Col>
             </Row>{/*End of sets documentation row*/}
 
-            {/*Properties of sets Row*/}
-            <Row>
-                <Col md="12">
-                    <h2 className="headerPerSection">Properties of Relations</h2>
-                    <p>Relations <b>R</b> are the subset of <b>A&sup2;</b>; we can call this relation a subset from <b>A</b> to <b>A</b>  </p>
-                    <p>This section describes the functions you can use to test relations on sets.</p>
-                    <pre>
-                        <code className="language-python">
-                            {`  print()`}
-                        </code>
-                    </pre>    
-                </Col>
-            </Row>{/*End of properties of sets Row*/}
+            <PropertiesOfSets></PropertiesOfSets>
 
 
             {/*Conclusion Row*/}
