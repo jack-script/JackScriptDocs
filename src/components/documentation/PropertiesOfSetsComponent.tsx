@@ -42,10 +42,38 @@ const PropertiesOfSets = () =>{
                     <h4 className="libraryFunctionHeader">isIrreflexive() function</h4>
                     <p>Takes in 2 parameters: <code>isReflexive(IR, SuperSet)</code> where the first param is the a set of Coords and the second is a normal set</p>
                     <p>Pretty much almost the reverse of isReflexive(); isIrreflexive() returns true if there are no Coords in <b>IR</b> that are related pairs of SuperSet   </p>
-                    <p>E.g  if <code>let A = &#123; 2,3,5 &#125;</code> then <code> R = &#123; (3,2), (2,5), (3,5)&#125; </code> is irreflexive since no member of is related to itself </p>
+                    <p>E.g  if <code>let A = &#123; 2,3,5 &#125;</code> then <code> R = &#123; (3,2), (2,5), (3,5)&#125; </code> is irreflexive since no member of <code>A</code> is related to itself </p>
+                    <p><code>S = &#123; (2,2), (2,5), (3,5)&#125;</code> is neither reflexive nor irreflexive</p>    
                     <pre>
                         <code className="language-python">
-                            {`  print()`}
+                            {`   normalset1 = {2, 3, 4}
+    normalset2 = {2, 3, 4}
+    normalset3 = {2, 3, 4, 5}
+    
+    cartesian1 = createCartesian(normalset1, normalset2);
+    cartesian2 = createCartesian(normalset1, normalset3);
+    
+    print(isIrreflexive(cartesian2, normalset1)); # will return False
+`}
+                        </code>
+                    </pre> 
+                </Col>
+            </Row>{/*End of properties of sets Row*/}
+
+            <hr></hr>
+            <Row>
+                <Col md="12">
+                    <h4 className="libraryFunctionHeader">isSymmetric() function</h4>
+                    <p>isSymmetric(ReflexiveSet, SuperSet) takes thwo parameters</p>
+                    <p>isSymmetric() makes sure that for every element in ReflexiveSet that is passed in, has an inverse coordinate within that ReflexiveSetOfCoords</p>
+                    <p>The ReflexiveSetOfCoords must obviosly still be a Relation on SuperSet</p>
+                    <pre>
+                        <code className="language-python">
+                            {`   normalset1 = {2, 3, 4}
+    normalset1 = {2, 3, 4, 8}
+    myset = { coords(2,3), coords(3,2), coords(8,3), coords(3,8)}
+    print(isSymmetric(myset,normalset1  )) # returns True
+`}
                         </code>
                     </pre> 
                 </Col>
