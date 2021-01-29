@@ -1,4 +1,5 @@
-This project written in TYPESCRIPT AND JAVASCRIPT using the REACT LIBRARY
-<h1>To run this project in development:</h1>
+### JackscriptDocs
+##### JackScriptDocs is the documentation website of <https://github.com/danielromeo/jackscript-py> 
+<p>This website is built in ReactJS and Typescript</p>
 
-##### `npm start`
+<h4>To make contributions to this project, read [conributing.md](contributing.md)</h4>
