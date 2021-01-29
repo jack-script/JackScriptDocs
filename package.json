@@ -1,5 +1,5 @@
 {
-  "homepage": "http://danielromeo.github.io/jackscript",
+  "homepage": ".",
   "name": "jackscript",
   "version": "0.1.0",
   "private": true,
@@ -25,6 +25,7 @@
     "prismjs": "^1.22.0",
     "react": "^16.13.1",
     "react-animated-css": "^1.2.1",
+    "react-devicon": "^0.1.9",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
