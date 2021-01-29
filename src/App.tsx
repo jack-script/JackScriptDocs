@@ -7,12 +7,12 @@ import Contents from './components/documentation/contents';
 function App() {
 	return (
 		<div className="App">
+
+			<Header></Header>
+			<Contents></Contents>
+			<Footer></Footer>
+
 		
-
-		<Header></Header>
-		<Contents></Contents>
-
-		{/*Include footer here*/ }
 		</div>
 	);
 }
