@@ -3,8 +3,6 @@ import {Navbar,
   NavLink,
   NavItem} from 'reactstrap';
 
-import logo from '../images/logo.png';
-
 const Footer = () => {
 
   const styles = {
