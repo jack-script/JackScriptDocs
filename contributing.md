@@ -13,5 +13,5 @@
 <p>A reviewer will then review your code and merge it to the master branch</p> 
 
 #### To run this software in development
-`npm start`
+`yarn start`
 
