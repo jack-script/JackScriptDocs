@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install packages
-        run: npm ci
+        run: npm i --no-optional
       - name: Build project
         run: npm run build
       - name: Export static files
