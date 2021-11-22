@@ -29,6 +29,7 @@ const Home: NextPage = () => {
 			<Header></Header>
 			<Container>
 				<Row>
+        <Col>
 					<Card>
 						<CardBody>
 							<CardTitle tag="h5">Card title</CardTitle>
@@ -43,6 +44,47 @@ const Home: NextPage = () => {
 							<Button>click</Button>
 						</CardBody>
 					</Card>
+
+
+          </Col>
+
+          <Col>
+          <Card>
+            <CardBody>
+              <CardTitle tag="h5">Card title</CardTitle>
+              <CardSubtitle className="mb-2 text-muted" tag="h6">
+                Card subtitle
+              </CardSubtitle>
+              <CardText>
+                Some quick example text to build on the card
+                title and make up the bulk of the card's
+                content.
+              </CardText>
+              <Button>click</Button>
+            </CardBody>
+          </Card>
+
+          
+          </Col>
+
+          <Col>
+          <Card>
+            <CardBody>
+              <CardTitle tag="h5">Card title</CardTitle>
+              <CardSubtitle className="mb-2 text-muted" tag="h6">
+                Card subtitle
+              </CardSubtitle>
+              <CardText>
+                Some quick example text to build on the card
+                title and make up the bulk of the card's
+                content.
+              </CardText>
+              <Button>click</Button>
+            </CardBody>
+          </Card>
+
+          
+          </Col>
 				</Row>
 			</Container>
 		</div>
