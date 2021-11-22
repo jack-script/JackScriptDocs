@@ -10,8 +10,8 @@
 8. Pull request your branch to the upstream/master branch
 
 <br />
-<p>A reviewer will then review your code and merge it to the master branch</p> 
+<p>A reviewer will then review your code and merge it to the master branch</p>
 
 #### To run this software in development
-`yarn start`
 
+`yarn start`
